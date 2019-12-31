@@ -45,7 +45,7 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
-    "start": "npm run develop",
+    "start": "npm run dev",
     "serve": "gatsby serve",
     "now-build": "yarn run build"
   }

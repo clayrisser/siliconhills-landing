@@ -1,58 +1,57 @@
-import React, { Fragment } from 'react';
-import Sticky from 'react-stickynode';
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Modal } from '@redq/reuse-modal';
-import { agencyTheme } from 'common/src/theme/agency';
+import { theme } from 'common/src/theme/appclassic';
 import { ResetCSS } from 'common/src/assets/css/style';
-import { GlobalStyle, AgencyWrapper } from '../containers/Agency/agency.style';
-import Navbar from '../containers/Agency/Navbar';
-import BannerSection from '../containers/Agency/BannerSection';
-import FeatureSection from '../containers/Agency/FeatureSection';
-import AboutUsSection from '../containers/Agency/AboutUsSection';
-import WorkHistory from '../containers/Agency/WorkHistory';
-import BlogSection from '../containers/Agency/BlogSection';
-import TestimonialSection from '../containers/Agency/TestimonialSection';
-import TeamSection from '../containers/Agency/TeamSection';
-import VideoSection from '../containers/Agency/VideoSection';
-import FaqSection from '../containers/Agency/FaqSection';
-import NewsletterSection from '../containers/Agency/NewsletterSection';
-import QualitySection from '../containers/Agency/QualitySection';
-import Footer from '../containers/Agency/Footer';
-import { DrawerProvider } from 'common/src/contexts/DrawerContext';
-import '@redq/reuse-modal/es/index.css';
+import Sticky from 'react-stickynode';
+import ProcessSection from '../containers/Silicon/Process';
+import WorkHistory from '../containers/Silicon/WorkHistory';
+import BlogSection from '../containers/Silicon/BlogSection';
+import FeatureSection from '../containers/Silicon/FeatureSection';
+import Navbar from '../containers/Silicon/Navbar';
+import Banner from '../containers/Silicon/Banner';
+import Customer from '../containers/Silicon/Customer';
+import KeyFeatures from '../containers/Silicon/KeyFeatures';
+import AppSlider from '../containers/Silicon/AppSlider';
+import Features from '../containers/Silicon/Features';
+import DesignedAndBuilt from '../containers/Silicon/DesignedAndBuilt';
+import FeatureTab from '../containers/Silicon/FeatureTab';
+import ClientBlock from '../containers/Silicon/ClientBlock';
+import PricingPolicy from '../containers/Silicon/PricingPolicy';
+import Testimonial from '../containers/Silicon/Testimonial';
+import Faq from '../containers/Silicon/Faq';
+import JoinTrail from '../containers/Silicon/JoinTrail';
+import Footer from '../containers/Silicon/Footer';
+import GlobalStyle, {
+  AppWrapper,
+  ContentWrapper,
+} from '../containers/Silicon/appClassic.style';
+
 import SEO from '../components/seo';
 
-export default () => {
+export default function() {
   return (
-    <ThemeProvider theme={agencyTheme}>
-      <Fragment>
-        <SEO title="Agency" />
-        <Modal />
+    <ThemeProvider theme={theme}>
+      <>
+        <SEO title="App Classic" />
         <ResetCSS />
         <GlobalStyle />
-        {/* End of agency head section */}
-        {/* Start agency wrapper section */}
-        <AgencyWrapper>
-          <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
-            <DrawerProvider>
-              <Navbar />
-            </DrawerProvider>
+        <AppWrapper>
+          <Sticky top={0} innerZ={9999} activeClass="sticky-active">
+            <Navbar />
           </Sticky>
-          <BannerSection />
-          <FeatureSection />
-          <AboutUsSection />
-          <WorkHistory />
-          <BlogSection />
-          <QualitySection />
-          <VideoSection />
-          <TestimonialSection />
-          <TeamSection />
-          <FaqSection />
-          <NewsletterSection />
+          <ContentWrapper>
+            <Banner />
+            <Customer />
+            <ProcessSection/>
+            <WorkHistory />
+            <BlogSection />
+            <Testimonial />
+            <FeatureSection />
+            <ClientBlock />
+          </ContentWrapper>
           <Footer />
-        </AgencyWrapper>
-        {/* End of agency wrapper section */}
-      </Fragment>
+        </AppWrapper>
+      </>
     </ThemeProvider>
   );
-};
+}

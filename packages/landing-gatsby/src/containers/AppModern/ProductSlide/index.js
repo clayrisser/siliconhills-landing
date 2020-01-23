@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade';
 import Heading from 'reusecore/src/elements/Heading';
 import Image from 'reusecore/src/elements/Image';
 import Swiper from 'react-id-swiper';
-import 'react-id-swiper/lib/styles/css/swiper.css';
+import 'swiper/css/swiper.css';
 import ProductSlideWrapper, {
   Container,
   CarouselArea,

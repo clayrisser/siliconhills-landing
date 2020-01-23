@@ -6,7 +6,7 @@ import Image from 'reusecore/src/elements/Image';
 import GlideCarousel from 'common/src/components/GlideCarousel';
 import GlideSlide from 'common/src/components/GlideCarousel/glideSlide';
 import Swiper from 'react-id-swiper';
-import 'react-id-swiper/lib/styles/css/swiper.css';
+import 'swiper/css/swiper.css';
 import ProductSlideWrapper, {
   Container,
   CarouselArea,

@@ -15,7 +15,7 @@ GatsbyJs server will start in `localhost:8000`
 
 ```
 // For starting NextJs Server run
-yarn nextjs-dev
+yarn next-dev
 ```
 
 NextJs Server will start in `localhost:3000`
@@ -33,6 +33,8 @@ Available routes are below
 /crypto
 /charity
 /interior
+/appmodern
+/appclassic
 ```
 
 # Folder Structure

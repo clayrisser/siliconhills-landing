@@ -21,12 +21,10 @@ yarn-debug.log*
 yarn-error.log*
 
 #server file
-packages/functions/next
 package-lock.json
 .firebase
 .firebaserc
 #submodule
-packages/reusecore
 .cache/
 now.json
 firebase.json

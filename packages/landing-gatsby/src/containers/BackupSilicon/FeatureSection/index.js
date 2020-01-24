@@ -1,12 +1,12 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import PropTypes from "prop-types";
-import Box from "reusecore/src/elements/Box";
-import Text from "reusecore/src/elements/Text";
-import Heading from "reusecore/src/elements/Heading";
-import FeatureBlock from "common/src/components/FeatureBlock";
-import Container from "common/src/components/UI/Container";
-import FeatureSectionWrapper from "./featureSection.style";
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import Box from 'reusecore/src/elements/Box';
+import Text from 'reusecore/src/elements/Text';
+import Heading from 'reusecore/src/elements/Heading';
+import FeatureBlock from 'common/src/components/FeatureBlock';
+import Container from 'common/src/components/UI/Container';
+import FeatureSectionWrapper from './featureSection.style';
 
 const FeatureSection = ({
   row,
@@ -18,7 +18,7 @@ const FeatureSection = ({
   featureDescription,
   iconStyle,
   contentStyle,
-  blockWrapperStyle
+  blockWrapperStyle,
 }) => {
   const Data = useStaticQuery(graphql`
     query {
@@ -32,10 +32,9 @@ const FeatureSection = ({
       }
     }
   `);
-  console.log("Data", Data);
 
   return (
-    <FeatureSectionWrapper id="services">
+    <FeatureSectionWrapper id="featureSection">
       <Container>
         <Box {...sectionHeader}>
           <Text content="OUR SERVICES" {...sectionSubTitle} />
@@ -73,84 +72,84 @@ FeatureSection.propTypes = {
   sectionTitle: PropTypes.object,
   sectionSubTitle: PropTypes.object,
   featureTitle: PropTypes.object,
-  featureDescription: PropTypes.object
+  featureDescription: PropTypes.object,
 };
 
 // FeatureSection default style
 FeatureSection.defaultProps = {
   // section header default style
   sectionHeader: {
-    mb: ["40px", "56px"]
+    mb: ['40px', '56px'],
   },
   // sub section default style
   sectionSubTitle: {
-    as: "span",
-    display: "block",
-    textAlign: "center",
-    fontSize: "14px",
-    letterSpacing: "0.15em",
-    fontWeight: "700",
-    color: "#10ac84",
-    mb: "10px"
+    as: 'span',
+    display: 'block',
+    textAlign: 'center',
+    fontSize: '14px',
+    letterSpacing: '0.15em',
+    fontWeight: '700',
+    color: '#10ac84',
+    mb: '10px',
   },
   // section title default style
   sectionTitle: {
-    textAlign: "center",
-    fontSize: ["20px", "24px"],
-    fontWeight: "400",
-    color: "#0f2137",
-    letterSpacing: "-0.025em",
-    mb: "0"
+    textAlign: 'center',
+    fontSize: ['20px', '24px'],
+    fontWeight: '400',
+    color: '#0f2137',
+    letterSpacing: '-0.025em',
+    mb: '0',
   },
   // feature row default style
   row: {
     flexBox: true,
-    flexWrap: "wrap"
+    flexWrap: 'wrap',
   },
   // feature col default style
   col: {
-    width: [1, 1 / 2, 1 / 2, 1 / 2],
-    borderLeft: "1px solid #f1f4f6",
-    borderBottom: "1px solid #f1f4f6"
+    width: [1, 1 / 2, 1 / 2, 1 / 3],
+    borderLeft: '1px solid #f1f4f6',
+    borderBottom: '1px solid #f1f4f6',
   },
   // feature block wrapper default style
   blockWrapperStyle: {
-    p: ["30px", "20px", "30px", "40px"]
+    p: ['30px', '20px', '30px', '40px'],
   },
   // feature icon default style
   iconStyle: {
-    width: "84px",
-    height: "84px",
-    m: "0 auto",
-    borderRadius: "50%",
-    bg: "#93d26e",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontSize: "36px",
-    color: "#ffffff",
-    overflow: "hidden",
-    mb: "30px"
+    width: '84px',
+    height: '84px',
+    m: '0 auto',
+    borderRadius: '50%',
+    bg: '#93d26e',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '36px',
+    color: '#ffffff',
+    overflow: 'hidden',
+    mb: '30px',
   },
   // feature content default style
   contentStyle: {
-    textAlign: "center"
+    textAlign: 'center',
   },
   // feature title default style
   featureTitle: {
-    fontSize: ["18px", "20px"],
-    fontWeight: "400",
-    color: "#0f2137",
-    lineHeight: "1.5",
-    mb: ["10px", "10px", "10px", "20px"],
-    letterSpacing: "-0.020em"
+    fontSize: ['18px', '20px'],
+    fontWeight: '400',
+    color: '#0f2137',
+    lineHeight: '1.5',
+    mb: ['10px', '10px', '10px', '20px'],
+    letterSpacing: '-0.020em',
   },
   // feature description default style
   featureDescription: {
-    fontSize: "15px",
-    lineHeight: "1.75",
-    color: "#343d48cc"
-  }
+    fontSize: '15px',
+    lineHeight: '1.75',
+    color: '#343d48cc',
+  },
 };
 
 export default FeatureSection;

@@ -1,17 +1,17 @@
-import React, { useState, useRef } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Fade from 'react-reveal/Fade';
-import ScrollSpyMenu from 'common/src/components/ScrollSpyMenu';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { Icon } from 'react-icons-kit';
-import { menu } from 'react-icons-kit/feather/menu';
-import { x } from 'react-icons-kit/feather/x';
-import { search } from 'react-icons-kit/feather/search';
-import Logo from 'reusecore/src/elements/UI/Logo';
-import Button from 'reusecore/src/elements/Button';
-import Container from 'common/src/components/UI/Container';
-import useOnClickOutside from 'common/src/hooks/useOnClickOutside';
-import NavbarWrapper, { MenuArea, MobileMenu, Search } from './navbar.style';
+import React, { useState, useRef } from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Fade from "react-reveal/Fade";
+import ScrollSpyMenu from "common/src/components/ScrollSpyMenu";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Icon } from "react-icons-kit";
+import { menu } from "react-icons-kit/feather/menu";
+import { x } from "react-icons-kit/feather/x";
+import { search } from "react-icons-kit/feather/search";
+import Logo from "reusecore/src/elements/UI/Logo";
+import Button from "reusecore/src/elements/Button";
+import Container from "common/src/components/UI/Container";
+import useOnClickOutside from "common/src/hooks/useOnClickOutside";
+import NavbarWrapper, { MenuArea, MobileMenu, Search } from "./navbar.style";
 
 const Navbar = () => {
   const data = useStaticQuery(graphql`
@@ -26,17 +26,25 @@ const Navbar = () => {
             label
             path
             offset
+            dropdown {
+              id
+              label
+            }
           }
         }
       }
     }
   `);
+  console.log(data.appClassicJson.navbar, "dropdown");
+
   const { logo, navMenu } = data.appClassicJson.navbar;
 
+  // console.log("data", data.appClassicJson.navbar);
+
   const [state, setState] = useState({
-    search: '',
+    search: "",
     searchToggle: false,
-    mobileMenu: false,
+    mobileMenu: false
   });
 
   const searchRef = useRef(null);
@@ -45,19 +53,19 @@ const Navbar = () => {
   );
 
   const toggleHandler = type => {
-    if (type === 'search') {
+    if (type === "search") {
       setState({
         ...state,
-        search: '',
+        search: "",
         searchToggle: !state.searchToggle,
-        mobileMenu: false,
+        mobileMenu: false
       });
     }
 
-    if (type === 'menu') {
+    if (type === "menu") {
       setState({
         ...state,
-        mobileMenu: !state.mobileMenu,
+        mobileMenu: !state.mobileMenu
       });
     }
   };
@@ -65,22 +73,22 @@ const Navbar = () => {
   const handleOnChange = event => {
     setState({
       ...state,
-      search: event.target.value,
+      search: event.target.value
     });
   };
 
   const handleSearchForm = event => {
     event.preventDefault();
 
-    if (state.search !== '') {
-      console.log('search data: ', state.search);
+    if (state.search !== "") {
+      console.log("search data: ", state.search);
 
       setState({
         ...state,
-        search: '',
+        search: ""
       });
     } else {
-      console.log('Please fill this field.');
+      console.log("Please fill this field.");
     }
   };
 
@@ -95,7 +103,7 @@ const Navbar = () => {
         />
         {/* end of logo */}
 
-        <MenuArea className={state.searchToggle ? 'active' : ''}>
+        <MenuArea className={state.searchToggle ? "active" : ""}>
           <ScrollSpyMenu className="menu" menuItems={navMenu} offset={-84} />
           {/* end of main menu */}
 
@@ -112,7 +120,7 @@ const Navbar = () => {
               className="text"
               variant="textButton"
               icon={<Icon icon={state.searchToggle ? x : search} />}
-              onClick={() => toggleHandler('search')}
+              onClick={() => toggleHandler("search")}
             />
           </Search>
           {/* end of search */}
@@ -134,13 +142,13 @@ const Navbar = () => {
             }
             color="#0F2137"
             variant="textButton"
-            onClick={() => toggleHandler('menu')}
+            onClick={() => toggleHandler("menu")}
           />
         </MenuArea>
       </Container>
 
       {/* start mobile menu */}
-      <MobileMenu className={`mobile-menu ${state.mobileMenu ? 'active' : ''}`}>
+      <MobileMenu className={`mobile-menu ${state.mobileMenu ? "active" : ""}`}>
         <Container>
           <ScrollSpyMenu className="menu" menuItems={navMenu} offset={-84} />
           <Button title="Try for Free" />

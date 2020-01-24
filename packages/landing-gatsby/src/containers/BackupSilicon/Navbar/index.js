@@ -1,8 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Fade from "react-reveal/Fade";
 import ScrollSpyMenu from "common/src/components/ScrollSpyMenu";
-import Scrollspy from "react-scrollspy";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Icon } from "react-icons-kit";
 import { menu } from "react-icons-kit/feather/menu";
@@ -13,13 +12,11 @@ import Button from "reusecore/src/elements/Button";
 import Container from "common/src/components/UI/Container";
 import useOnClickOutside from "common/src/hooks/useOnClickOutside";
 import NavbarWrapper, { MenuArea, MobileMenu, Search } from "./navbar.style";
-import LogoImage from "common/src/assets/image/appModern/logo-white.png";
-import LogoImageAlt from "common/src/assets/image/appModern/logo.png";
 
 const Navbar = () => {
   const data = useStaticQuery(graphql`
     query {
-      appModernJson {
+      appClassicJson {
         navbar {
           logo {
             publicURL
@@ -34,22 +31,14 @@ const Navbar = () => {
       }
     }
   `);
-  console.log("data_123", JSON.stringify(data));
-  // useEffect(() => {
-  //   console.log(data, "data");
-  // });
-  const { navMenu } = data.appModernJson.navbar;
+  console.log("data_nav", JSON.stringify(data));
+  const { logo, navMenu } = data.appClassicJson.navbar;
 
   const [state, setState] = useState({
     search: "",
     searchToggle: false,
     mobileMenu: false
   });
-
-  // useEffect(() => {
-  //   // Update the document title using the browser API
-  //   console.log(navMenu, "nav");
-  // });
 
   const searchRef = useRef(null);
   useOnClickOutside(searchRef, () =>
@@ -96,33 +85,14 @@ const Navbar = () => {
     }
   };
 
-  const scrollItems = [];
-
-  navMenu.forEach(item => {
-    scrollItems.push(item.path.slice(1));
-  });
-
-  const handleRemoveMenu = () => {
-    setState({
-      ...state,
-      mobileMenu: false
-    });
-  };
-
   return (
     <NavbarWrapper className="navbar">
       <Container>
         <Logo
-          href="/appmodern"
-          logoSrc={LogoImage}
-          title="App Modern"
-          className="main-logo"
-        />
-        <Logo
-          href="/appmodern"
-          logoSrc={LogoImageAlt}
-          title="App Modern"
-          className="logo-alt"
+          className="logo"
+          href="/appclassic"
+          logoSrc={logo.publicURL}
+          title="App Classic"
         />
         {/* end of logo */}
 
@@ -173,24 +143,7 @@ const Navbar = () => {
       {/* start mobile menu */}
       <MobileMenu className={`mobile-menu ${state.mobileMenu ? "active" : ""}`}>
         <Container>
-          <Scrollspy
-            className="menu"
-            items={scrollItems}
-            offset={-84}
-            currentClassName="active"
-          >
-            {navMenu.map((menu, index) => (
-              <li key={`menu_key${index}`}>
-                <AnchorLink
-                  href={menu.path}
-                  offset={menu.offset}
-                  onClick={handleRemoveMenu}
-                >
-                  {menu.label}
-                </AnchorLink>
-              </li>
-            ))}
-          </Scrollspy>
+          <ScrollSpyMenu className="menu" menuItems={navMenu} offset={-84} />
           <Button title="Try for Free" />
         </Container>
       </MobileMenu>

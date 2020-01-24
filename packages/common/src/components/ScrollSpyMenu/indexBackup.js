@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import PropTypes from "prop-types";
 import Scrollspy from "react-scrollspy";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import "./index.css";
+
 import { DrawerContext } from "../../contexts/DrawerContext";
 
 const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
@@ -54,29 +54,26 @@ const ScrollSpyMenu = ({ className, menuItems, drawerClose, ...props }) => {
                   {menu.label}
                 </AnchorLink>
               ) : (
-                // <AnchorLink href={menu.path} offset={menu.offset}>
-                //   {menu.label}
-                // </AnchorLink>
-                <AnchorLink
-                  href={menu.path}
-                  offset={menu.offset}
-                  className={menu.dropdown ? "dropdown" : "hov"}
-                >
-                  <span className="dropdown-list">{menu.label}</span>
-
-                  {menu.dropdown ? (
-                    <div class="dropdown-content">
-                      {/* <a href="#">Link 1</a>
-                      <a href="#">Link 2</a>
-                      <a href="#">Link 3</a> */}
-                      {menu.dropdown.map(drop => {
-                        return <a href="#">{drop.label}</a>;
-                      })}
-                    </div>
-                  ) : (
-                    <div />
-                  )}
+                <AnchorLink href={menu.path} offset={menu.offset}>
+                  {menu.label}
                 </AnchorLink>
+                // <AnchorLink
+                //   href={menu.path}
+                //   offset={menu.offset}
+                //   className={menu.dropdown ? "dropdown" : "hov"}
+                // >
+                //   <span className="dropdown-list">{menu.label}</span>
+
+                //   {menu.dropdown ? (
+                //     <div class="dropdown-content">
+                //       <a href="#">Link 1</a>
+                //       <a href="#">Link 2</a>
+                //       <a href="#">Link 3</a>
+                //     </div>
+                //   ) : (
+                //     <div />
+                //   )}
+                // </AnchorLink>
               )}
             </>
           )}

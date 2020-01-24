@@ -10,39 +10,21 @@
       },
       {
         "id": 2,
-        "label": "Services",
-        "path": "#services",
-        "offset": "84",
-        "dropdown": [
-          {
-            "id": 1,
-            "label": "Mobile App Development"
-          },
-          {
-            "id": 2,
-            "label": "Web App Development"
-          },
-          {
-            "id": 3,
-            "label": "Cloud Infrastructure Development"
-          },
-          {
-            "id": 4,
-            "label": "Api Development"
-          }
-        ]
+        "label": "KeyFeatures",
+        "path": "#keyFeatures",
+        "offset": "84"
       },
       {
         "id": 3,
-        "label": "Our work",
-        "path": "ourWork",
+        "label": "Faq",
+        "path": "faq",
         "offset": "84"
       },
 
       {
         "id": 4,
-        "label": "Contact",
-        "path": "#contact",
+        "label": "Testimonial",
+        "path": "#testimonial",
         "offset": "80"
       }
     ]

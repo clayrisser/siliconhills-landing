@@ -3,6 +3,8 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "common/src/theme/appclassic";
 import { ResetCSS } from "common/src/assets/css/style";
 import Sticky from "react-stickynode";
+import BannerSection from '../containers/Silicon/Banner';
+import FeatureSection2 from '../containers/Hosting/Features';
 import ProcessSection from "../containers/Silicon/Process";
 import WorkHistory from "../containers/Silicon/WorkHistory";
 import BlogSection from "../containers/Silicon/BlogSection";
@@ -40,6 +42,8 @@ export default function() {
             <Navbar />
           </Sticky>
           <ContentWrapper>
+            <BannerSection />
+            <FeatureSection2 />
             <Banner />
             <Customer />
             <ProcessSection />

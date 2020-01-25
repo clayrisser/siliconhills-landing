@@ -11,7 +11,6 @@ import BlogSection from "../containers/Silicon/BlogSection";
 import FeatureSection from "../containers/Silicon/FeatureSection";
 import Navbar from "../containers/Silicon/Navbar";
 import Banner from "../containers/Silicon/Banner";
-import Customer from "../containers/Silicon/Customer";
 import KeyFeatures from "../containers/Silicon/KeyFeatures";
 import AppSlider from "../containers/Silicon/AppSlider";
 import Features from "../containers/Silicon/Features";
@@ -43,11 +42,9 @@ export default function() {
           </Sticky>
           <ContentWrapper>
             <BannerSection />
-            <FeatureSection2 />
-            <Banner />
-            <Customer />
-            <ProcessSection />
             <WorkHistory />
+            <FeatureSection2 />
+            <ProcessSection />
             <BlogSection />
 
             <FeatureSection />

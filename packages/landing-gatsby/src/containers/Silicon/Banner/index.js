@@ -86,12 +86,13 @@ const BannerSection = ({
       <Box
         bc="green"
         style={{
-          paddingTop: "80px",
-          height: "100vh",
-          display: "flex",
-          justifyContent: "center",
           alignItems: "center",
-          position: "absolute"
+          display: "flex",
+          height: "100vh",
+          justifyContent: "center",
+          paddingTop: "80px",
+          position: "absolute",
+          zIndex: "-1"
         }}
       >
         <ReactPlayer
@@ -109,8 +110,9 @@ const BannerSection = ({
         style={{
           height: "100vh",
           marginTop: "100vh",
+          position: "absolute",
           width: "100%",
-          position: "absolute"
+          zIndex: "-1"
         }}
       />
       <BannerWrapper id="banner_section">

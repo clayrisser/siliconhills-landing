@@ -42,15 +42,15 @@ export default function() {
           <ContentWrapper>
             <Banner />
             <Customer />
-            <ProcessSection />
-            <WorkHistory />
-            <BlogSection />
-
+            {/* <ProcessSection /> */}
             <FeatureSection />
+            <WorkHistory />
+            {/* <BlogSection /> */}
+
             {/* <PricingPolicy /> */}
-            <Testimonial />
+            {/* <Testimonial /> */}
             {/* <Faq /> */}
-            <ClientBlock />
+            {/* <ClientBlock /> */}
             <JoinTrail />
           </ContentWrapper>
           <Footer />

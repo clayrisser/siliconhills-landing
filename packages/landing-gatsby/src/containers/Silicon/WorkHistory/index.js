@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import CountUp from "react-countup";
 import Box from "reusecore/src/elements/Box";
@@ -15,7 +16,8 @@ import Ride from "../../../images/rideuser.jpg";
 import WaitCheck from "../../../images/waitcheck.jpg";
 import ModrenGreek from "../../../images/modrengreek.jpg";
 import Gold from "../../../images/goldiq.png";
-import { borderColor } from "styled-system";
+import { borderColor, backgroundColor } from "styled-system";
+import "./workHistory.style";
 
 const WorkHistory = ({ row, col, cardStyle, title, description, btnStyle }) => {
   return (
@@ -43,8 +45,10 @@ const WorkHistory = ({ row, col, cardStyle, title, description, btnStyle }) => {
                   textAlign: "center"
                 }}
               >
-                <img height="100%" width="100%" src={Shamel} alt="Shamel" />
-                Shamel
+                <Link to="/portfolio">
+                  <img height="100%" width="100%" src={Shamel} alt="Shamel" />
+                  Shamel
+                </Link>
               </div>
             </Card>
             <Card className="card" {...cardStyle}>
@@ -56,13 +60,15 @@ const WorkHistory = ({ row, col, cardStyle, title, description, btnStyle }) => {
                   textAlign: "center"
                 }}
               >
-                <img
-                  height="100%"
-                  width="100%"
-                  src={Shamel_User}
-                  alt="Shameluser"
-                />
-                Shameluser
+                <Link to="/portfolio">
+                  <img
+                    height="100%"
+                    width="100%"
+                    src={Shamel_User}
+                    alt="Shameluser"
+                  />
+                  Shameluser
+                </Link>
               </div>
             </Card>
             <Card className="card" {...cardStyle}>
@@ -74,8 +80,10 @@ const WorkHistory = ({ row, col, cardStyle, title, description, btnStyle }) => {
                   textAlign: "center"
                 }}
               >
-                <img height="100%" width="100%" src={Ride} alt="Ridemap" />
-                Ridemap
+                <Link to="/prtfolio">
+                  <img height="100%" width="100%" src={Ride} alt="Ridemap" />
+                  Ridemap
+                </Link>
               </div>
             </Card>
           </Box>
@@ -98,13 +106,15 @@ const WorkHistory = ({ row, col, cardStyle, title, description, btnStyle }) => {
                   textAlign: "center"
                 }}
               >
-                <img
-                  height="100%"
-                  width="100%"
-                  src={WaitCheck}
-                  alt="WaitCheck"
-                />
-                Waitcheck
+                <Link to="/portfolio">
+                  <img
+                    height="100%"
+                    width="100%"
+                    src={WaitCheck}
+                    alt="WaitCheck"
+                  />
+                  Waitcheck
+                </Link>
               </div>
             </Card>
             <Card className="card" {...cardStyle}>
@@ -116,13 +126,15 @@ const WorkHistory = ({ row, col, cardStyle, title, description, btnStyle }) => {
                   textAlign: "center"
                 }}
               >
-                <img
-                  height="100%"
-                  width="100%"
-                  src={ModrenGreek}
-                  alt="ModrenGreek"
-                />
-                ModrenGreek
+                <Link to="/portfolio">
+                  <img
+                    height="100%"
+                    width="100%"
+                    src={ModrenGreek}
+                    alt="ModrenGreek"
+                  />
+                  ModrenGreek
+                </Link>
               </div>
             </Card>
             <Card className="card" {...cardStyle}>
@@ -134,17 +146,19 @@ const WorkHistory = ({ row, col, cardStyle, title, description, btnStyle }) => {
                   textAlign: "center"
                 }}
               >
-                <img
-                  height="100%"
-                  width="100%"
-                  src={Gold}
-                  style={{
-                    objectFit: "cover",
-                    backgroundImageColor: "whitesmoke"
-                  }}
-                  alt="Goldiq"
-                />
-                Goldiq
+                <Link to="./portfolio">
+                  <img
+                    height="100%"
+                    width="100%"
+                    src={Gold}
+                    style={{
+                      objectFit: "cover",
+                      backgroundImageColor: "whitesmoke"
+                    }}
+                    alt="Goldiq"
+                  />
+                  Goldiq
+                </Link>
               </div>
             </Card>
           </Box>
@@ -235,6 +249,7 @@ WorkHistory.defaultProps = {
     boxShadow: "0px 8px 20px 0px rgba(16, 66, 97, 0.07)",
     borderColor: "black"
   },
+
   // WorkHistory section title default style
   title: {
     fontSize: ["26px", "26px", "30px", "40px"],

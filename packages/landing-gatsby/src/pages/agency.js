@@ -1,26 +1,26 @@
-import React, { Fragment } from 'react';
-import Sticky from 'react-stickynode';
-import { ThemeProvider } from 'styled-components';
-import { Modal } from '@redq/reuse-modal';
-import { agencyTheme } from 'common/src/theme/agency';
-import { ResetCSS } from 'common/src/assets/css/style';
-import { GlobalStyle, AgencyWrapper } from '../containers/Agency/agency.style';
-import Navbar from '../containers/Agency/Navbar';
-import BannerSection from '../containers/Agency/BannerSection';
-import FeatureSection from '../containers/Agency/FeatureSection';
-import AboutUsSection from '../containers/Agency/AboutUsSection';
-import WorkHistory from '../containers/Agency/WorkHistory';
-import BlogSection from '../containers/Agency/BlogSection';
-import TestimonialSection from '../containers/Agency/TestimonialSection';
-import TeamSection from '../containers/Agency/TeamSection';
-import VideoSection from '../containers/Agency/VideoSection';
-import FaqSection from '../containers/Agency/FaqSection';
-import NewsletterSection from '../containers/Agency/NewsletterSection';
-import QualitySection from '../containers/Agency/QualitySection';
-import Footer from '../containers/Agency/Footer';
-import { DrawerProvider } from 'common/src/contexts/DrawerContext';
-import '@redq/reuse-modal/es/index.css';
-import SEO from '../components/seo';
+import React, { Fragment } from "react";
+import Sticky from "react-stickynode";
+import { ThemeProvider } from "styled-components";
+import { Modal } from "@redq/reuse-modal";
+import { agencyTheme } from "common/src/theme/agency";
+import { ResetCSS } from "common/src/assets/css/style";
+import { GlobalStyle, AgencyWrapper } from "../containers/Agency/agency.style";
+import Navbar from "../containers/Agency/Navbar";
+import BannerSection from "../containers/Agency/BannerSection";
+import FeatureSection from "../containers/Agency/FeatureSection";
+import AboutUsSection from "../containers/Agency/AboutUsSection";
+import WorkHistory from "../containers/Agency/WorkHistory";
+import BlogSection from "../containers/Agency/BlogSection";
+import TestimonialSection from "../containers/Agency/TestimonialSection";
+import TeamSection from "../containers/Agency/TeamSection";
+import VideoSection from "../containers/Agency/VideoSection";
+import FaqSection from "../containers/Agency/FaqSection";
+import NewsletterSection from "../containers/Agency/NewsletterSection";
+import QualitySection from "../containers/Agency/QualitySection";
+import Footer from "../containers/Agency/Footer";
+import { DrawerProvider } from "common/src/contexts/DrawerContext";
+import "@redq/reuse-modal/es/index.css";
+import SEO from "../components/seo";
 
 export default () => {
   return (
@@ -40,15 +40,15 @@ export default () => {
           </Sticky>
           <BannerSection />
           <FeatureSection />
-          <AboutUsSection />
-          <WorkHistory />
-          <BlogSection />
-          <QualitySection />
-          <VideoSection />
-          <TestimonialSection />
+          {/* <AboutUsSection />
+          <WorkHistory /> */}
+          {/* <BlogSection /> */}
+          {/* <QualitySection /> */}
+          {/* <VideoSection /> */}
+          {/* <TestimonialSection />
           <TeamSection />
           <FaqSection />
-          <NewsletterSection />
+          <NewsletterSection /> */}
           <Footer />
         </AgencyWrapper>
         {/* End of agency wrapper section */}

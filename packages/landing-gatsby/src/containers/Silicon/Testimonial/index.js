@@ -1,16 +1,16 @@
-import React, { Fragment } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Fade from 'react-reveal/Fade';
-import Text from 'reusecore/src/elements/Text';
-import Heading from 'reusecore/src/elements/Heading';
-import Button from 'reusecore/src/elements/Button';
-import Image from 'reusecore/src/elements/Image';
-import Container from 'common/src/components/UI/Container';
-import Rating from 'common/src/components/Rating';
-import GlideCarousel from 'common/src/components/GlideCarousel';
-import GlideSlide from 'common/src/components/GlideCarousel/glideSlide';
-import { SectionHeader } from '../appClassic.style';
-import SectionWrapper, { CarouselWrapper } from './testimonial.style';
+import React, { Fragment } from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Fade from "react-reveal/Fade";
+import Text from "reusecore/src/elements/Text";
+import Heading from "reusecore/src/elements/Heading";
+import Button from "reusecore/src/elements/Button";
+import Image from "reusecore/src/elements/Image";
+import Container from "common/src/components/UI/Container";
+import Rating from "common/src/components/Rating";
+import GlideCarousel from "common/src/components/GlideCarousel";
+import GlideSlide from "common/src/components/GlideCarousel/glideSlide";
+import { SectionHeader } from "../appClassic.style";
+import SectionWrapper, { CarouselWrapper } from "./testimonial.style";
 
 const Testimonial = () => {
   const data = useStaticQuery(graphql`
@@ -35,16 +35,16 @@ const Testimonial = () => {
   const { slogan, title, reviews } = data.appClassicJson.testimonial;
 
   const glideOptions = {
-    type: 'carousel',
+    type: "carousel",
     gap: 0,
     autoplay: 5000,
     perView: 2,
     animationDuration: 700,
     breakpoints: {
       991: {
-        perView: 1,
-      },
-    },
+        perView: 1
+      }
+    }
   };
 
   return (

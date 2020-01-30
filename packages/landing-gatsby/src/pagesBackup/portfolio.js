@@ -37,7 +37,7 @@ export default () => {
               <Navbar />
             </DrawerProvider>
           </Sticky>
-          {/* <BannerSection />
+          <BannerSection />
           <PortfolioShowcase />
           <AwardsSection />
           <ProcessSection />
@@ -45,8 +45,7 @@ export default () => {
           <CallToAction />
           <TestimonialSection />
           <ClientsSection />
-          <ContactSection /> */}
-          <ApiDevelopment />
+          <ContactSection />
           <Footer />
         </ContentWrapper>
       </Fragment>

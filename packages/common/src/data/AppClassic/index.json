@@ -29,7 +29,7 @@
       {
         "id": 2,
         "label": "Our work",
-        "path": "ourWork",
+        "path": "#ourWork",
         "offset": "84"
       }
     ]

@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import PropTypes from "prop-types";
 import Box from "reusecore/src/elements/Box";
 import Text from "reusecore/src/elements/Text";
@@ -28,6 +28,7 @@ const FeatureSection = ({
           id
           icon
           title
+          path
         }
       }
     }
@@ -47,16 +48,22 @@ const FeatureSection = ({
         <Box className="row" {...row}>
           {Data.agencyJson.features.map((feature, index) => (
             <Box className="col" {...col} key={`feature-${index}`}>
-              <FeatureBlock
-                icon={<i className={feature.icon} />}
-                wrapperStyle={blockWrapperStyle}
-                iconStyle={iconStyle}
-                contentStyle={contentStyle}
-                title={<Heading content={feature.title} {...featureTitle} />}
-                description={
-                  <Text content={feature.description} {...featureDescription} />
-                }
-              />
+              {console.log(feature.path, "path")}
+              <Link to={feature.path}>
+                <FeatureBlock
+                  icon={<i className={feature.icon} />}
+                  wrapperStyle={blockWrapperStyle}
+                  iconStyle={iconStyle}
+                  contentStyle={contentStyle}
+                  title={<Heading content={feature.title} {...featureTitle} />}
+                  description={
+                    <Text
+                      content={feature.description}
+                      {...featureDescription}
+                    />
+                  }
+                />
+              </Link>
             </Box>
           ))}
         </Box>
@@ -109,7 +116,7 @@ FeatureSection.defaultProps = {
   },
   // feature col default style
   col: {
-    width: [1, 1 / 2, 1 / 2, 1 / 2],
+    width: [1 / 2, 1 / 2, 1 / 2, 1 / 2],
     borderLeft: "1px solid #f1f4f6",
     borderBottom: "1px solid #f1f4f6"
   },

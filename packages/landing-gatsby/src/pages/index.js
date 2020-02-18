@@ -3,14 +3,13 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "common/src/theme/appclassic";
 import { ResetCSS } from "common/src/assets/css/style";
 import Sticky from "react-stickynode";
-import BannerSection from '../containers/Silicon/Banner';
-import FeatureSection2 from '../containers/Hosting/Features';
 import ProcessSection from "../containers/Silicon/Process";
 import WorkHistory from "../containers/Silicon/WorkHistory";
 import BlogSection from "../containers/Silicon/BlogSection";
 import FeatureSection from "../containers/Silicon/FeatureSection";
 import Navbar from "../containers/Silicon/Navbar";
 import Banner from "../containers/Silicon/Banner";
+import Customer from "../containers/Silicon/Customer";
 import KeyFeatures from "../containers/Silicon/KeyFeatures";
 import AppSlider from "../containers/Silicon/AppSlider";
 import Features from "../containers/Silicon/Features";
@@ -41,17 +40,17 @@ export default function() {
             <Navbar />
           </Sticky>
           <ContentWrapper>
-            <BannerSection />
-            <WorkHistory />
-            <FeatureSection2 />
-            <ProcessSection />
-            <BlogSection />
-
+            <Banner />
+            <Customer />
+            {/* <ProcessSection /> */}
             <FeatureSection />
+            <WorkHistory />
+            {/* <BlogSection /> */}
+
             {/* <PricingPolicy /> */}
-            <Testimonial />
+            {/* <Testimonial /> */}
             {/* <Faq /> */}
-            <ClientBlock />
+            {/* <ClientBlock /> */}
             <JoinTrail />
           </ContentWrapper>
           <Footer />

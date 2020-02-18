@@ -108,7 +108,7 @@ FeatureSection.defaultProps = {
   },
   // feature col default style
   col: {
-    width: [1, 1 / 2, 1 / 2, 1 / 3],
+    width: [1, 1 / 2, 1 / 2, 1 / 2],
     borderLeft: '1px solid #f1f4f6',
     borderBottom: '1px solid #f1f4f6',
   },

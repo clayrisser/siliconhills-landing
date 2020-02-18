@@ -1,16 +1,16 @@
-import styled from 'styled-components';
-import { themeGet } from 'styled-system';
+import styled from "styled-components";
+import { themeGet } from "styled-system";
 
 const FooterArea = styled.footer`
   padding: 96px 0 60px;
   margin-top: 75px;
-  background-color: ${themeGet('colors.secondary', '#09142E')};
+  background-color: ${themeGet("colors.secondary", "#09142E")};
   @media only screen and (max-width: 1366px) {
     padding-top: 80px;
     margin-top: 60px;
   }
   @media only screen and (max-width: 667px) {
-    padding-top: 80px;
+    padding-top: 380px;
     padding-bottom: 50px;
     margin-top: 45px;
   }
@@ -60,7 +60,7 @@ export const WidgetArea = styled.div`
     }
 
     h3 {
-      color: ${themeGet('colors.white', '#ffffff')};
+      color: ${themeGet("colors.white", "#ffffff")};
       font-size: 18px;
       line-height: 24px;
       font-weight: 500;
@@ -118,7 +118,7 @@ export const MenuItem = styled.li`
     margin: 5px 15px;
   }
   a {
-    color: ${themeGet('colors.white', '#ffffff')};
+    color: ${themeGet("colors.white", "#ffffff")};
     transition: all 0.3s ease;
     &:hover {
       color: rgba(255, 255, 255, 0.7);

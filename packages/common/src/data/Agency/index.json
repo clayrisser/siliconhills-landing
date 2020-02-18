@@ -63,25 +63,29 @@
       "id": 1,
       "icon": "flaticon-flask",
       "title": "Web App Development",
-      "description": "By using Search Engine Optimization, You will get more Clients"
+      "description": "we develop progressive web apps using react js",
+      "path": "/agency"
     },
     {
       "id": 2,
       "icon": "flaticon-pencil-case",
       "title": "Mobile App Development",
-      "description": "We provide the best UI/UX Design by following the latest trends of the market ."
+      "description": "We develop both ios and android apps using react native .",
+      "path": "/charity"
     },
     {
       "id": 3,
       "icon": "flaticon-ruler",
       "title": "Cloud Infrastructure Development",
-      "description": "We respect our customer opinions and deals with them with perfect wireframing "
+      "description": "We deal with the continous integration with aws kubernetes.Building dockers. ",
+      "path": "/crypto"
     },
     {
       "id": 4,
       "icon": "flaticon-startup",
       "title": "Api Development",
-      "description": "We are commited to provide proper business solutions with reasonable pricing"
+      "description": "We give services like rest apis graphql apis and oauths ",
+      "path": "/portfolio"
     }
   ],
   "qualityFeature": [

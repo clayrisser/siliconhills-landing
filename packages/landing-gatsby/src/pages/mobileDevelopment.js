@@ -1,10 +1,12 @@
 import React, { Fragment } from "react";
 import Sticky from "react-stickynode";
+import Navbar from "../containers/Silicon/Navbar";
+
 import { ThemeProvider } from "styled-components";
 import { charityTheme } from "common/src/theme/charity";
 import { ResetCSS } from "common/src/assets/css/style";
 import { DrawerProvider } from "common/src/contexts/DrawerContext";
-import Navbar from "../containers/Charity/Navbar";
+// import Navbar from "../containers/Charity/Navbar";
 import DrawerSection from "../containers/Charity/DrawerSection";
 import BannerSection from "../containers/Charity/BannerSection";
 import FeatureSection from "../containers/Charity/FeatureSection";
@@ -18,7 +20,9 @@ import MapSection from "../containers/Charity/MapSection";
 import FundraiserSection from "../containers/Charity/FundraiserSection";
 import BlogSection from "../containers/Charity/BlogSection";
 import ClientBlock from "../containers/Charity/ClientBlock";
-import Footer from "../containers/Charity/Footer";
+// import Footer from "../containers/Charity/Footer";
+import Footer from "../containers/Hosting/Footer";
+import MobileDevelopment from "../containers/Silicon/MobileDevelopment";
 import {
   GlobalStyle,
   CharityWrapper,
@@ -35,10 +39,11 @@ export default () => {
         <GlobalStyle />
         {/* Start charity wrapper section */}
         <CharityWrapper>
-          <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
+          {/* <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
             <Navbar />
-          </Sticky>
-          <DrawerProvider>
+          </Sticky> */}
+          <Navbar />
+          {/* <DrawerProvider>
             <DrawerSection />
           </DrawerProvider>
           <ContentWrapper>
@@ -54,7 +59,8 @@ export default () => {
             <FundraiserSection />
             <BlogSection />
             <ClientBlock />
-          </ContentWrapper>
+          </ContentWrapper> */}
+          <MobileDevelopment />
           <Footer />
         </CharityWrapper>
         {/* End of charity wrapper section */}

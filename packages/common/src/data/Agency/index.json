@@ -64,28 +64,28 @@
       "icon": "flaticon-flask",
       "title": "Web App Development",
       "description": "we develop progressive web apps using react js",
-      "path": "/agency"
+      "path": "/webDevelopment"
     },
     {
       "id": 2,
       "icon": "flaticon-pencil-case",
       "title": "Mobile App Development",
       "description": "We develop both ios and android apps using react native .",
-      "path": "/charity"
+      "path": "/mobileDevelopment"
     },
     {
       "id": 3,
       "icon": "flaticon-ruler",
       "title": "Cloud Infrastructure Development",
       "description": "We deal with the continous integration with aws kubernetes.Building dockers. ",
-      "path": "/crypto"
+      "path": "/cloudDevelopment"
     },
     {
       "id": 4,
       "icon": "flaticon-startup",
       "title": "Api Development",
       "description": "We give services like rest apis graphql apis and oauths ",
-      "path": "/portfolio"
+      "path": "/apiDevelopment"
     }
   ],
   "qualityFeature": [

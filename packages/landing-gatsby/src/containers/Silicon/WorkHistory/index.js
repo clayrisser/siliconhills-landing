@@ -19,13 +19,23 @@ import Gold from "../../../images/goldiq.png";
 import { borderColor, backgroundColor } from "styled-system";
 import "./workHistory.style";
 
-const WorkHistory = ({ row, col, cardStyle, title, description, btnStyle }) => {
+const WorkHistory = ({
+  row,
+  col,
+  cardStyle,
+  title,
+  sectionHeader,
+  description,
+  btnStyle,
+  sectionSubtitle,
+  sectionTitle
+}) => {
   return (
     <WorkHistoryWrapper id="ourWork">
       <Container>
-        <h1 style={{ textAlign: "center", font: "10px", color: "brown" }}>
-          Some of our projects
-        </h1>
+        <Box {...sectionHeader}>
+          <Heading content="Featured Products" {...sectionTitle} />
+        </Box>
         <Box className="row">
           <Box
             className="col"
@@ -67,7 +77,6 @@ const WorkHistory = ({ row, col, cardStyle, title, description, btnStyle }) => {
                     src={Shamel_User}
                     alt="Shameluser"
                   />
-                  Shameluser
                 </Link>
               </div>
             </Card>
@@ -157,7 +166,7 @@ const WorkHistory = ({ row, col, cardStyle, title, description, btnStyle }) => {
                     }}
                     alt="Goldiq"
                   />
-                  Goldiq
+                  <Text content="Goldiq" />
                 </Link>
               </div>
             </Card>
@@ -168,47 +177,47 @@ const WorkHistory = ({ row, col, cardStyle, title, description, btnStyle }) => {
             <img height="400px" width="300px" src={WaitCheck} alt="" />
             <img height="400px" width="300px" src={ModrenGreek} alt="" />
             <img height="400px" width="300px" src={Gold} alt="" /> */}
-          {/* <FeatureBlock
-              title={
-                <Heading
-                  content="Working With Knowledge, Passion, Heart & Soul "
-                  {...title}
-                />
-              }
-              description={
-                <Text
-                  content="We have worked with some leading agencies around the globe and their appreciation is our main strength ."
-                  {...description}
-                />
-              }
-              button={<Button title="WORK HISTORY" {...btnStyle} />}
-            />
-          </Box>
-          <Box className="col" {...col}>
-            <CounterUpArea>
-              <Card className="card" {...cardStyle}>
-                <h3>
-                  <CountUp start={0} end={20} />+
-                </h3>
-                <Text content="Companies Engaged" />
-              </Card>
-              <Card className="card" {...cardStyle}>
-                <h3>
-                  <CountUp start={0} end={199} duration={5} />
-                </h3>
-                <Text content="Happy Customers" />
-              </Card>
-              <Card className="card" {...cardStyle}>
-                <h3>
-                  <CountUp start={0} end={300} duration={5} />+
-                </h3>
-                <Text content="Project Complete" />
-              </Card>
-              <Card className="card" {...cardStyle}>
-                <Text content="& Much More" />
-                <a href="#1">View work history</a>
-              </Card>
-            </CounterUpArea> */}
+          <FeatureBlock
+            title={
+              <Heading
+                content="Working With Knowledge, Passion, Heart & Soul "
+                {...title}
+              />
+            }
+            description={
+              <Text
+                content="We have worked with some leading agencies around the globe and their appreciation is our main strength ."
+                {...description}
+              />
+            }
+            button={<Button title="WORK HISTORY" {...btnStyle} />}
+          />
+        </Box>
+        <Box className="col" {...col}>
+          <CounterUpArea>
+            <Card className="card" {...cardStyle}>
+              <h3>
+                <CountUp start={0} end={20} />+
+              </h3>
+              <Text content="Companies Engaged" />
+            </Card>
+            <Card className="card" {...cardStyle}>
+              <h3>
+                <CountUp start={0} end={199} duration={5} />
+              </h3>
+              <Text content="Happy Customers" />
+            </Card>
+            <Card className="card" {...cardStyle}>
+              <h3>
+                <CountUp start={0} end={300} duration={5} />+
+              </h3>
+              <Text content="Project Complete" />
+            </Card>
+            <Card className="card" {...cardStyle}>
+              <Text content="& Much More" />
+              <a href="#1">View work history</a>
+            </Card>
+          </CounterUpArea>
         </Box>
       </Container>
     </WorkHistoryWrapper>
@@ -271,6 +280,29 @@ WorkHistory.defaultProps = {
     minWidth: "156px",
     fontSize: "14px",
     fontWeight: "500"
+  },
+  // sub section default style
+  sectionSubTitle: {
+    as: "span",
+    display: "block",
+    textAlign: "center",
+    fontSize: "14px",
+    letterSpacing: "0.15em",
+    fontWeight: "700",
+    color: "#10ac84",
+    mb: "10px"
+  },
+  // section title default style
+  sectionTitle: {
+    textAlign: "center",
+    fontSize: ["20px", "24px"],
+    fontWeight: "400",
+    color: "#0f2137",
+    letterSpacing: "-0.025em",
+    mb: "0"
+  },
+  sectionHeader: {
+    mb: ["40px", "56px"]
   }
 };
 

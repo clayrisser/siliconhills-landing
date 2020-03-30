@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import { Box } from "rebass";
 import Fade from "react-reveal/Fade";
 import ScrollSpyMenu from "common/src/components/ScrollSpyMenu";
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -97,7 +98,7 @@ const Navbar = () => {
       <Container>
         <Logo
           className="logo"
-          href="/appclassic"
+          href="/"
           logoSrc={logo.publicURL}
           title="App Classic"
         />
@@ -105,27 +106,28 @@ const Navbar = () => {
 
         <MenuArea className={state.searchToggle ? "active" : ""}>
           <ScrollSpyMenu className="menu" menuItems={navMenu} offset={-84} />
+          <Box width={40} />
           {/* end of main menu */}
 
-          <Search className="search" ref={searchRef}>
-            <form onSubmit={handleSearchForm}>
-              <input
-                type="text"
-                value={state.search}
-                placeholder="Enter your keyword"
-                onChange={handleOnChange}
-              />
-            </form>
-            <Button
-              className="text"
-              variant="textButton"
-              icon={<Icon icon={state.searchToggle ? x : search} />}
-              onClick={() => toggleHandler("search")}
-            />
-          </Search>
+          {/* <Search className="search" ref={searchRef}> */}
+          {/*   <form onSubmit={handleSearchForm}> */}
+          {/*     <input */}
+          {/*       type="text" */}
+          {/*       value={state.search} */}
+          {/*       placeholder="Enter your keyword" */}
+          {/*       onChange={handleOnChange} */}
+          {/*     /> */}
+          {/*   </form> */}
+          {/*   <Button */}
+          {/*     className="text" */}
+          {/*     variant="textButton" */}
+          {/*     icon={<Icon icon={state.searchToggle ? x : search} />} */}
+          {/*     onClick={() => toggleHandler("search")} */}
+          {/*   /> */}
+          {/* </Search> */}
           {/* end of search */}
 
-          <AnchorLink href="#trail" offset={84}>
+          <AnchorLink href="#contact_section" offset={84}>
             <Button className="trail" title="Get a Quote" />
           </AnchorLink>
 
@@ -151,7 +153,9 @@ const Navbar = () => {
       <MobileMenu className={`mobile-menu ${state.mobileMenu ? "active" : ""}`}>
         <Container>
           <ScrollSpyMenu className="menu" menuItems={navMenu} offset={-84} />
-          <Button title="Try for Free" />
+          <AnchorLink href="#contact_section" offset={84}>
+            <Button title="Get a Quote" />
+          </AnchorLink>
         </Container>
       </MobileMenu>
       {/* end of mobile menu */}

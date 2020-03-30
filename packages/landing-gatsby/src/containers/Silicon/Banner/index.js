@@ -84,7 +84,6 @@ const BannerSection = ({
   return (
     <>
       <Box
-        bc="green"
         style={{
           alignItems: "center",
           display: "flex",
@@ -115,6 +114,15 @@ const BannerSection = ({
           zIndex: "-1"
         }}
       />
+      <Box
+        style={{
+          height: "100vh",
+          paddingTop: "80px",
+          width: "100%",
+          position: "absolute",
+          backgroundColor: "#ffffff88"
+        }}
+      />
       <BannerWrapper id="banner_section">
         <ParticlesComponent />
         <Container className="banner_container">
@@ -122,21 +130,10 @@ const BannerSection = ({
             <Box {...textArea}>
               <DiscountWrapper>
                 <DiscountLabel>
-                  <Text {...discountAmount} content="25% Discount" />
-                  <Text
-                    {...discountText}
-                    content="on every first annual purchase"
-                  />
+                  <Text {...discountText} content="Custom Digital Products" />
                 </DiscountLabel>
               </DiscountWrapper>
-              <Heading
-                {...title}
-                content="The best webhosting starting at $12.98/month"
-              />
-              <Text
-                {...description}
-                content=" For Enhanced performance we use LiteSpeed Web Server, HTTP/2, PHP7. We make your website faster, which will help you to increase search ranking!"
-              />
+              <Heading {...title} content="Empowering Your Business" />
             </Box>
           </Box>
         </Container>
@@ -207,8 +204,8 @@ BannerSection.defaultProps = {
     mr: "0.4em"
   },
   discountText: {
-    fontSize: ["13px", "14px", "14px", "14px", "14px"],
-    fontWeight: "400",
+    fontSize: ["43px", "44px", "44px", "44px", "44px"],
+    fontWeight: "600",
     color: "#0f2137",
     mb: 0,
     as: "span"

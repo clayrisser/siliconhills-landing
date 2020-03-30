@@ -4,7 +4,7 @@ import { theme } from "common/src/theme/appclassic";
 import { ResetCSS } from "common/src/assets/css/style";
 import Sticky from "react-stickynode";
 import ProcessSection from "../containers/Silicon/Process";
-// import WorkHistory from "../containers/Silicon/WorkHistory";
+import WorkHistory from "../containers/Silicon/WorkHistory";
 import BlogSection from "../containers/Silicon/BlogSection";
 import FeatureSection from "../containers/Silicon/FeatureSection";
 import Navbar from "../containers/Silicon/Navbar";
@@ -49,7 +49,7 @@ export default function() {
             {/* <Customer /> */}
             {/* <ProcessSection /> */}
             <FeatureSection />
-            {/* <WorkHistory /> */}
+            <WorkHistory />
             {/* <BlogSection /> */}
             {/* <ClientBlock /> */}
 

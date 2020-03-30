@@ -63,29 +63,29 @@
       "id": 1,
       "icon": "flaticon-flask",
       "title": "Web App Development",
-      "description": "we develop progressive web apps using react js",
-      "path": "/webDevelopment"
+      "description": "We develop immersive interactive web applications from scratch using modern technologies.",
+      "path": "#services"
     },
     {
       "id": 2,
       "icon": "flaticon-pencil-case",
       "title": "Mobile App Development",
-      "description": "We develop both ios and android apps using react native .",
-      "path": "/mobileDevelopment"
+      "description": "We take your mobile app ideas and build native ios and android applications.",
+      "path": "#services"
     },
     {
       "id": 3,
       "icon": "flaticon-ruler",
       "title": "Cloud Infrastructure Development",
-      "description": "We deal with the continous integration with aws kubernetes.Building dockers. ",
-      "path": "/cloudDevelopment"
+      "description": "We develop strategies for deploying applications to the cloud.",
+      "path": "#services"
     },
     {
       "id": 4,
       "icon": "flaticon-startup",
       "title": "Api Development",
-      "description": "We give services like rest apis graphql apis and oauths ",
-      "path": "/apiDevelopment"
+      "description": "We build backend services using modern protocols such as REST, GraphQL and Oauth.",
+      "path": "#services"
     }
   ],
   "qualityFeature": [

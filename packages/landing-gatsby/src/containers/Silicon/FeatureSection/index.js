@@ -39,11 +39,7 @@ const FeatureSection = ({
     <FeatureSectionWrapper id="services">
       <Container>
         <Box {...sectionHeader}>
-          <Text content="OUR SERVICES" {...sectionSubTitle} />
-          <Heading
-            content="Featured Service that We Provide"
-            {...sectionTitle}
-          />
+          <Heading content="Our Services" {...sectionTitle} />
         </Box>
         <Box className="row" {...row}>
           {Data.agencyJson.features.map((feature, index) => (

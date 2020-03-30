@@ -1,22 +1,22 @@
-import React from 'react';
-import Fade from 'react-reveal/Fade';
-import { Icon } from 'react-icons-kit';
-import { playCircle } from 'react-icons-kit/fa/playCircle';
-import Text from 'reusecore/src/elements/Text';
-import Image from 'reusecore/src/elements/Image';
-import Button from 'reusecore/src/elements/Button';
-import Heading from 'reusecore/src/elements/Heading';
-import Rating from 'common/src/components/Rating';
-import Container from 'common/src/components/UI/Container';
+import React from "react";
+import Fade from "react-reveal/Fade";
+import { Icon } from "react-icons-kit";
+import { playCircle } from "react-icons-kit/fa/playCircle";
+import Text from "reusecore/src/elements/Text";
+import Image from "reusecore/src/elements/Image";
+import Button from "reusecore/src/elements/Button";
+import Heading from "reusecore/src/elements/Heading";
+import Rating from "common/src/components/Rating";
+import Container from "common/src/components/UI/Container";
 import BannerWrapper, {
   BannerContent,
   RatingInfo,
   BannerImage,
-  ButtonGroup,
-} from './banner.style';
+  ButtonGroup
+} from "./banner.style";
 
-import microsoft from 'common/src/assets/image/appClassic/microsoft.svg';
-import bannerImg from 'common/src/assets/image/appClassic/bannerImg.png';
+import microsoft from "common/src/assets/image/appClassic/microsoft.svg";
+import bannerImg from "common/src/assets/image/appClassic/bannerImg.png";
 
 const Banner = () => {
   return (
@@ -33,7 +33,7 @@ const Banner = () => {
             <Heading
               as="h1"
               content="The Revolution of
-      Ultimate Platform to 
+      Ultimate Platform to
       monitor your task"
             />
           </Fade>

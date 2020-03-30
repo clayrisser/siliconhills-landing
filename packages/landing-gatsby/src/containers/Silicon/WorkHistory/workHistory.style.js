@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { themeGet } from 'styled-system';
+import styled from "styled-components";
+import { themeGet } from "styled-system";
 
 const WorkHistoryWrapper = styled.section`
   padding: 70px 0 80px;
@@ -44,6 +44,7 @@ const CounterUpArea = styled.div`
   @media only screen and (max-width: 480px) {
     margin-left: 0;
   }
+
   .card {
     width: calc(50% - 25px);
     margin-left: 25px;
@@ -68,7 +69,7 @@ const CounterUpArea = styled.div`
       font-size: 60px;
       font-weight: 300;
       margin: 0 0 20px;
-      color: ${themeGet('colors.headingColor', '#0f2137')};
+      color: ${themeGet("colors.headingColor", "#0f2137")};
       @media (max-width: 990px) {
         font-size: 40px;
       }
@@ -78,7 +79,7 @@ const CounterUpArea = styled.div`
     }
 
     p {
-      color: ${themeGet('colors.headingColor', '#0f2137')};
+      color: ${themeGet("colors.headingColor", "#0f2137")};
       font-size: 16px;
       font-weight: 500;
       margin-bottom: 7px;
@@ -89,7 +90,7 @@ const CounterUpArea = styled.div`
     }
 
     a {
-      color: ${themeGet('colors.linkColor', '#2b9eff')};
+      color: ${themeGet("colors.linkColor", "#2b9eff")};
       font-weight: 500;
       font-size: 15px;
       text-decoration: underline;
@@ -108,7 +109,7 @@ const CounterUpArea = styled.div`
     &:last-child {
       box-shadow: none;
       border-radius: 5px;
-      border: 2px dashed ${themeGet('colors.inactiveIcon', '#ebebeb')};
+      border: 2px dashed ${themeGet("colors.inactiveIcon", "#ebebeb")};
     }
   }
 `;

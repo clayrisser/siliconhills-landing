@@ -10,7 +10,8 @@ import {
 } from "../containers/Portfolio/portfolio.style";
 
 import BannerSection from "../containers/Portfolio/Banner";
-import Navbar from "../containers/Portfolio/Navbar";
+// import Navbar from "../containers/Portfolio/Navbar";
+import Navbar from "../containers/Silicon/Navbar";
 import AwardsSection from "../containers/Portfolio/Awards";
 import PortfolioShowcase from "../containers/Portfolio/PortfolioShowcase";
 import ProcessSection from "../containers/Portfolio/Process";
@@ -19,9 +20,10 @@ import CallToAction from "../containers/Portfolio/CallToAction";
 import TestimonialSection from "../containers/Portfolio/Testimonial";
 import ClientsSection from "../containers/Portfolio/Clients";
 import ContactSection from "../containers/Portfolio/Contact";
-import Footer from "../containers/Portfolio/Footer";
+// import Footer from "../containers/Portfolio/Footer";
+import Footer from "../containers/Hosting/Footer";
 import SEO from "../components/seo";
-
+import ApiDevelopment from "../containers/Silicon/ApiDevelopment";
 
 export default () => {
   return (
@@ -37,7 +39,7 @@ export default () => {
               <Navbar />
             </DrawerProvider>
           </Sticky>
-          <BannerSection />
+          {/* <BannerSection />
           <PortfolioShowcase />
           <AwardsSection />
           <ProcessSection />
@@ -45,7 +47,10 @@ export default () => {
           <CallToAction />
           <TestimonialSection />
           <ClientsSection />
-          <ContactSection />
+          <ContactSection /> */}
+          <div style={{ paddingTop: "50px" }}>
+            <ApiDevelopment />
+          </div>
           <Footer />
         </ContentWrapper>
       </Fragment>

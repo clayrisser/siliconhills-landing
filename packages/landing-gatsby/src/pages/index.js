@@ -15,12 +15,17 @@ import AppSlider from "../containers/Silicon/AppSlider";
 import Features from "../containers/Silicon/Features";
 import DesignedAndBuilt from "../containers/Silicon/DesignedAndBuilt";
 import FeatureTab from "../containers/Silicon/FeatureTab";
-import ClientBlock from "../containers/Silicon/ClientBlock";
+// import ClientBlock from "../containers/Silicon/ClientBlock";
 import PricingPolicy from "../containers/Silicon/PricingPolicy";
 import Testimonial from "../containers/Silicon/Testimonial";
 import Faq from "../containers/Silicon/Faq";
+// import Footer from "../containers/Crypto/Footer";
+import ContactSection from "../containers/Hosting/Contact";
+import Footer from "../containers/Hosting/Footer";
+import ClientBlock from "../containers/Charity/ClientBlock";
+
 import JoinTrail from "../containers/Silicon/JoinTrail";
-import Footer from "../containers/Silicon/Footer";
+// import Footer from "../containers/Silicon/Footer";
 import GlobalStyle, {
   AppWrapper,
   ContentWrapper
@@ -46,14 +51,19 @@ export default function() {
             <FeatureSection />
             <WorkHistory />
             {/* <BlogSection /> */}
+            <ClientBlock />
 
             {/* <PricingPolicy /> */}
             {/* <Testimonial /> */}
             {/* <Faq /> */}
             {/* <ClientBlock /> */}
-            <JoinTrail />
+            {/* <JoinTrail /> */}
+            {/* <div style={{ paddingTop: "250px" }}>
+              <Footer />
+            </div> */}
+            <ContactSection />
+            <Footer />
           </ContentWrapper>
-          <Footer />
         </AppWrapper>
       </>
     </ThemeProvider>

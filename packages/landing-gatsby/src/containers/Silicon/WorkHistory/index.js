@@ -80,7 +80,7 @@ const WorkHistory = ({ row, col, cardStyle, title, description, btnStyle }) => {
                   textAlign: "center"
                 }}
               >
-                <Link to="/prtfolio">
+                <Link to="/portfolio">
                   <img height="100%" width="100%" src={Ride} alt="Ridemap" />
                   Ridemap
                 </Link>
@@ -146,7 +146,7 @@ const WorkHistory = ({ row, col, cardStyle, title, description, btnStyle }) => {
                   textAlign: "center"
                 }}
               >
-                <Link to="./portfolio">
+                <Link to="/portfolio">
                   <img
                     height="100%"
                     width="100%"

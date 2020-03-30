@@ -1,25 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
-import Image from 'gatsby-image';
-import Tabs, { TabPane } from 'rc-tabs';
-import TabContent from 'rc-tabs/lib/TabContent';
-import ScrollableInkTabBar from 'rc-tabs/lib/ScrollableInkTabBar';
-import Box from 'reusecore/src/elements/Box';
-import Text from 'reusecore/src/elements/Text';
-import Heading from 'reusecore/src/elements/Heading';
-import Container from 'common/src/components/UI/Container';
-import GlideCarousel from 'common/src/components/GlideCarousel';
-import GlideSlide from 'common/src/components/GlideCarousel/glideSlide';
+import React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
+import Image from "gatsby-image";
+import Tabs, { TabPane } from "rc-tabs";
+import TabContent from "rc-tabs/lib/TabContent";
+import ScrollableInkTabBar from "rc-tabs/lib/ScrollableInkTabBar";
+import Box from "reusecore/src/elements/Box";
+import Text from "reusecore/src/elements/Text";
+import Heading from "reusecore/src/elements/Heading";
+import Container from "common/src/components/UI/Container";
+import GlideCarousel from "common/src/components/GlideCarousel";
+import GlideSlide from "common/src/components/GlideCarousel/glideSlide";
 import {
   PortfolioShowcaseWrapper,
   PortfolioShowcaseItem,
   PortfolioLink,
   BuiltWith,
   PortfolioMeta,
-  MetaItem,
-} from './portfolioShowcase.style';
-import { PrevButton, NextButton } from '../portfolio.style';
+  MetaItem
+} from "./portfolioShowcase.style";
+import { PrevButton, NextButton } from "../portfolio.style";
 
 const PortfolioShowcase = ({
   sectionWrapper,
@@ -29,7 +29,7 @@ const PortfolioShowcase = ({
   portfolioImage,
   portfolioDetails,
   titleStyle,
-  detailsStyle,
+  detailsStyle
 }) => {
   const Data = useStaticQuery(graphql`
     query {
@@ -60,10 +60,10 @@ const PortfolioShowcase = ({
 
   //Carousel Options
   const carouselOptions = {
-    type: 'carousel',
+    type: "carousel",
     perView: 1,
     gap: 0,
-    animationDuration: 900,
+    animationDuration: 900
   };
 
   return (
@@ -123,7 +123,7 @@ const PortfolioShowcase = ({
                           </Box>
                           <Box {...portfolioDetails}>
                             <PortfolioLink>
-                              <a href={portfolioItem.link || '#'}>
+                              <a href={portfolioItem.link || "#"}>
                                 VISIT LIVE SITE
                               </a>
                             </PortfolioLink>
@@ -144,7 +144,7 @@ const PortfolioShowcase = ({
                                 ))}
                               </BuiltWith>
                             ) : (
-                              ''
+                              ""
                             )}
                           </Box>
 
@@ -156,37 +156,37 @@ const PortfolioShowcase = ({
                               {portfolioItem.featuredIn ? (
                                 <MetaItem className="meta_featured">
                                   FEATURED IN
-                                  <a href={portfolioItem.featuredLink || '#'}>
+                                  <a href={portfolioItem.featuredLink || "#"}>
                                     {portfolioItem.featuredIn}
                                   </a>
                                 </MetaItem>
                               ) : (
-                                ''
+                                ""
                               )}
                               {portfolioItem.view ? (
                                 <MetaItem>
                                   <b>{portfolioItem.view}</b> View
                                 </MetaItem>
                               ) : (
-                                ''
+                                ""
                               )}
                               {portfolioItem.love ? (
                                 <MetaItem>
                                   <b>{portfolioItem.love}</b> Love
                                 </MetaItem>
                               ) : (
-                                ''
+                                ""
                               )}
                               {portfolioItem.feedback ? (
                                 <MetaItem>
                                   <b>{portfolioItem.feedback}</b> Feedback
                                 </MetaItem>
                               ) : (
-                                ''
+                                ""
                               )}
                             </PortfolioMeta>
                           ) : (
-                            ''
+                            ""
                           )}
                         </PortfolioShowcaseItem>
                       </GlideSlide>
@@ -210,51 +210,51 @@ PortfolioShowcase.propTypes = {
   portfolioImage: PropTypes.object,
   portfolioDetails: PropTypes.object,
   titleStyle: PropTypes.object,
-  detailsStyle: PropTypes.object,
+  detailsStyle: PropTypes.object
 };
 
 PortfolioShowcase.defaultProps = {
   sectionWrapper: {
-    pt: ['60px', '80px', '100px', '110px', '150px'],
-    pb: ['60px', '80px', '100px', '110px', '150px'],
+    pt: ["60px", "80px", "100px", "110px", "150px"],
+    pb: ["60px", "80px", "100px", "110px", "150px"]
   },
   secTitleWrapper: {
-    width: ['100%', '100%', '60%', '50%', '50%'],
-    mb: ['50px', '65px'],
+    width: ["100%", "100%", "60%", "50%", "50%"],
+    mb: ["50px", "65px"]
   },
   secTitle: {
-    fontSize: ['22px', '26px', '26px', '30px', '30px'],
-    fontWeight: '600',
-    color: '#302b4e',
-    lineHeight: '1.34',
-    mb: ['15px', '18px', '18px', '20px', '20px'],
+    fontSize: ["22px", "26px", "26px", "30px", "30px"],
+    fontWeight: "600",
+    color: "#302b4e",
+    lineHeight: "1.34",
+    mb: ["15px", "18px", "18px", "20px", "20px"]
   },
   secDescription: {
-    fontSize: ['15px', '16px'],
-    fontWeight: '400',
-    color: '#43414e',
-    lineHeight: '1.5',
-    mb: '0',
+    fontSize: ["15px", "16px"],
+    fontWeight: "400",
+    color: "#43414e",
+    lineHeight: "1.5",
+    mb: "0"
   },
   portfolioImage: {
-    width: [1, 1, 1 / 2],
+    width: [1, 1, 1 / 2]
   },
   portfolioDetails: {
     width: [1, 1, 1 / 2],
-    p: ['30px 0 0 0', '40px 0 0 0', '0 0 0 30px', '0 50px', '0 50px'],
+    p: ["30px 0 0 0", "40px 0 0 0", "0 0 0 30px", "0 50px", "0 50px"]
   },
   titleStyle: {
-    fontSize: ['22px', '22px', '26px', '40px', '40px'],
-    fontWeight: '600',
-    color: '#302b4e',
-    mb: '17px',
+    fontSize: ["22px", "22px", "26px", "40px", "40px"],
+    fontWeight: "600",
+    color: "#302b4e",
+    mb: "17px"
   },
   detailsStyle: {
-    fontSize: ['15px', '15px', '15px', '16px', '16px'],
-    color: '#43414e',
-    lineHeight: '1.5',
-    mb: '0',
-  },
+    fontSize: ["15px", "15px", "15px", "16px", "16px"],
+    color: "#43414e",
+    lineHeight: "1.5",
+    mb: "0"
+  }
 };
 
 export default PortfolioShowcase;

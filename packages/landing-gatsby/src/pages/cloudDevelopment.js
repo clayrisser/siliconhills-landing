@@ -4,8 +4,9 @@ import { ThemeProvider } from "styled-components";
 import { cryptoTheme } from "common/src/theme/crypto";
 import { ResetCSS } from "common/src/assets/css/style";
 import { GlobalStyle, ContentWrapper } from "../containers/Crypto/crypto.style";
+import Navbar from "../containers/Silicon/Navbar";
 import { DrawerProvider } from "common/src/contexts/DrawerContext";
-import Navbar from "../containers/Crypto/Navbar";
+// import Navbar from "../containers/Crypto/Navbar";
 import Banner from "../containers/Crypto/BannerSection";
 import BannerSlider from "../containers/Crypto/BannerSlider";
 import Transactions from "../containers/Crypto/Transaction";
@@ -14,8 +15,10 @@ import TrustedProofSections from "../containers/Crypto/TrustedProof";
 import ScalableSections from "../containers/Crypto/ScalableSection";
 import SlideSections from "../containers/Crypto/CryptoSlides";
 import BetaSections from "../containers/Crypto/BetaSection";
-import Footer from "../containers/Crypto/Footer";
+// import Footer from "../containers/Crypto/Footer";
+import Footer from "../containers/Hosting/Footer";
 import SEO from "../components/seo";
+import CloudDevelopment from "../containers/Silicon/CloudDevelopment";
 
 export default () => {
   return (
@@ -31,13 +34,15 @@ export default () => {
             </DrawerProvider>
           </Sticky>
           <Banner />
-          <BannerSlider />
+          {/* <BannerSlider />
           <Transactions />
           <ControlSections />
           <TrustedProofSections />
           <ScalableSections />
           <SlideSections />
-          <BetaSections />
+          <BetaSections /> */}
+          <CloudDevelopment />
+          {/* <Banner /> */}
           <Footer />
         </ContentWrapper>
       </Fragment>

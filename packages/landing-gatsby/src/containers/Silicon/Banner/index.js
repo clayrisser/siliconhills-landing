@@ -46,35 +46,39 @@ const BannerSection = ({
   `);
 
   useEffect(() => {
+    if (typeof window === "undefined") return () => {};
     function resize() {
-      setWidth(getWidth(window.innerWidth, window.innerHeight - 80));
-      setHeight(getHeight(window.innerWidth, window.innerHeight - 80));
+      if (typeof window === "undefined") return;
+      setWidth(getWidth());
+      setHeight(getHeight());
     }
     window.addEventListener("resize", resize);
     return () => window.removeEventListener("resize", resize);
   });
 
-  const [width, setWidth] = useState(
-    getWidth(window.innerWidth, window.innerHeight - 80)
-  );
-
-  const [height, setHeight] = useState(
-    getHeight(window.innerWidth, window.innerHeight - 80)
-  );
+  const [width, setWidth] = useState(getWidth());
+  const [height, setHeight] = useState(getHeight());
 
   function getIsWindowTooWide(aspectRatio = [16, 9]) {
+    if (typeof window === "undefined") return false;
     const windowAR = window.innerWidth / window.innerHeight;
     return aspectRatio[0] / aspectRatio[1] < windowAR;
   }
 
-  function getWidth(width, height, aspectRatio = [16, 9]) {
+  function getWidth(aspectRatio = [16, 9]) {
+    if (typeof window === "undefined") return 0;
+    const width = window.innerWidth;
+    const height = window.innerHeight - 80;
     const isWindowTooWide = getIsWindowTooWide(aspectRatio);
     if (!width) return "100%";
     if (!height) return width;
     return isWindowTooWide ? width : (height * aspectRatio[0]) / aspectRatio[1];
   }
 
-  function getHeight(width, height, aspectRatio = [16, 9]) {
+  function getHeight(aspectRatio = [16, 9]) {
+    if (typeof window === "undefined") return 0;
+    const width = window.innerWidth;
+    const height = window.innerHeight - 80;
     const isWindowTooWide = getIsWindowTooWide(aspectRatio);
     if (!height) return "100%";
     if (!width) return height;

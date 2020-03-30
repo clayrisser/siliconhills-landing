@@ -50,7 +50,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "now-build": "yarn run build",
-    "publish": "echo siliconhills.dev > public/CNAME && gh-pages public",
+    "publish": "echo siliconhills.dev > public/CNAME && gh-pages -d public",
     "serve": "gatsby serve",
     "start": "npm run dev"
   },

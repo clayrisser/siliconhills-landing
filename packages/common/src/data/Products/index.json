@@ -176,57 +176,56 @@
       "title": "ANIMATION",
       "portfolioItem": [
         {
-          "title": "Canada Media Site", {
-            "title": "RideMap",
-            "portfolioItem": [
-              {
-                "title": "Canada Media Site",
-                "description": "An effective and immersive user experience is what catches the attention and spreads a clear message. That's why we attach great importance to the fact that ergonomics serves the design, and that this design is innovative and neat.",
-                "image": "../../assets/image/portfolio/portfolio-1.jpg",
-                "link": "#ridemap",
-                "featuredIn": "AWWWARDS",
-                "featuredLink": "#",
-                "view": "4.5K",
-                "love": "1.5K",
-                "feedback": "1.2K",
-                "buildWith": [
-                  {
-                    "content": "React JS"
-                  },
-                  {
-                    "content": "Next JS"
-                  },
-                  {
-                    "content": "Styled Component"
-                  }
-                ]
-              },
-              {
-                "title": "RedQ, Inc. mobile app",
-                "description": "An effective and immersive user experience is what catches the attention and spreads a clear message. That's why we attach great importance to the fact that ergonomics serves the design, and that this design is innovative and neat.",
-                "image": "../../assets/image/portfolio/portfolio-2.jpg",
-                "link": "#",
-                "featuredIn": "AppStore",
-                "featuredLink": "#",
-                "view": "8.5K",
-                "love": "5.5K",
-                "feedback": "3.2K",
-                "buildWith": [
-                  {
-                    "content": "React Native"
-                  },
-                  {
-                    "content": "Firebase"
-                  },
-                  {
-                    "content": "Styled Component"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "title": "ANIMATION",
+          "title": "RideMap",
+          "portfolioItem": [
+            {
+              "title": "Canada Media Site",
+              "description": "An effective and immersive user experience is what catches the attention and spreads a clear message. That's why we attach great importance to the fact that ergonomics serves the design, and that this design is innovative and neat.",
+              "image": "../../assets/image/portfolio/portfolio-1.jpg",
+              "link": "#ridemap",
+              "featuredIn": "AWWWARDS",
+              "featuredLink": "#",
+              "view": "4.5K",
+              "love": "1.5K",
+              "feedback": "1.2K",
+              "buildWith": [
+                {
+                  "content": "React JS"
+                },
+                {
+                  "content": "Next JS"
+                },
+                {
+                  "content": "Styled Component"
+                }
+              ]
+            },
+            {
+              "title": "RedQ, Inc. mobile app",
+              "description": "An effective and immersive user experience is what catches the attention and spreads a clear message. That's why we attach great importance to the fact that ergonomics serves the design, and that this design is innovative and neat.",
+              "image": "../../assets/image/portfolio/portfolio-2.jpg",
+              "link": "#",
+              "featuredIn": "AppStore",
+              "featuredLink": "#",
+              "view": "8.5K",
+              "love": "5.5K",
+              "feedback": "3.2K",
+              "buildWith": [
+                {
+                  "content": "React Native"
+                },
+                {
+                  "content": "Firebase"
+                },
+                {
+                  "content": "Styled Component"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "ANIMATION",
           "description": "An effective and immersive user experience is what catches the attention and spreads a clear message. That's why we attach great importance to the fact that ergonomics serves the design, and that this design is innovative and neat.",
           "image": "../../assets/image/portfolio/portfolio-1.jpg",
           "link": "#",
